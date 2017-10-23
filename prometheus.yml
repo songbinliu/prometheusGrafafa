@@ -13,8 +13,8 @@ scrape_configs:
   - job_name: 'img-service'
     metrics_path: /metrics
     static_configs:
-        - targets: ['image.apps.octurbo.org', 'a23f22555b4eb11e79ecb0615046e67d-390783901.us-west-2.elb.amazonaws.com']
+      - targets: ['image.apps.octurbo.org']
   - job_name: 'img-triger'
     metrics_path: /img/random
     static_configs:
-      - targets: ['image.apps.octurbo.org', 'a23f22555b4eb11e79ecb0615046e67d-390783901.us-west-2.elb.amazonaws.com']
+      - targets: ['image.apps.octurbo.org']
