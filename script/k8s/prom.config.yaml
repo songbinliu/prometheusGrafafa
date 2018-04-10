@@ -33,5 +33,21 @@ data:
       # scheme defaults to 'http'.
       static_configs:
       - targets: ['istio-mixer.istio-system:9093']
+
+    - job_name: 'mongo-router-0'
+      # Override the global default and scrape targets from this job every 5 seconds.
+      scrape_interval: 5s
+      # metrics_path defaults to '/metrics'
+      # scheme defaults to 'http'.
+      static_configs:
+      - targets: ['mgo-exporter-service.mongodb:9216']
+
+    - job_name: 'mysql-5.6'
+      # Override the global default and scrape targets from this job every 5 seconds.
+      scrape_interval: 5s
+      # metrics_path defaults to '/metrics'
+      # scheme defaults to 'http'.
+      static_configs:
+      - targets: ['mysql-exporter.mongodb:9104']
 ---
 
